@@ -43,7 +43,7 @@ class BoardWriteForm extends Component {
     }
     
     if (this.props.location.query !== undefined) {
-      url = "/board/update";
+      url = "https://backend.bbs.alphakr.xyz/board/update";
       send_param = {
         headers,
         "_id" : this.props.location.query._id,
@@ -51,7 +51,7 @@ class BoardWriteForm extends Component {
         "content": boardContent
       };
     } else {
-      url = "/board/write";
+      url = "https://backend.bbs.alphakr.xyz/board/write";
       send_param = {
         headers,
         "_id" : $.cookie("login_id"),
