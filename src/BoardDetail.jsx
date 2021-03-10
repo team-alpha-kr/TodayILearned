@@ -25,7 +25,7 @@ class BoardDetail extends Component {
     };
     if (window.confirm("정말 삭제하시겠습니까?")) {
       axios
-        .post("/board/delete", send_param)
+        .post("https://backend.bbs.alphakr.xyz/board/delete", send_param)
         //정상 수행
         .then(returnData => {
           alert("게시글이 삭제 되었습니다.");
@@ -48,7 +48,7 @@ class BoardDetail extends Component {
       marginBottom: 5
     };
     axios
-      .post("/board/detail", send_param)
+      .post("https://backend.bbs.alphakr.xyz/board/detail", send_param)
       //정상 수행
       .then(returnData => {
         if (returnData.data.board[0]) {
