@@ -13,14 +13,14 @@ class BoardRow extends Component {
       <tr>
         <td>
           <NavLink
-            to={{ pathname: "/board/detail", query: { _id: this.props._id } }}
+            to={{ pathname: "https://backend.bbs.alphakr.xyz/board/detail", query: { _id: this.props._id } }}
           >
             {this.props.createdAt.substring(0, 10)}
           </NavLink>
         </td>
         <td>
           <NavLink
-            to={{ pathname: "/board/detail", query: { _id: this.props._id } }}
+            to={{ pathname: "https://backend.bbs.alphakr.xyz/board/detail", query: { _id: this.props._id } }}
           >
             {this.props.title}
           </NavLink>
@@ -45,7 +45,7 @@ class BoardForm extends Component {
       _id: $.cookie("login_id")
     };
     axios
-      .post("/board/getBoardList", send_param)
+      .post("https://backend.bbs.alphakr.xyz/board/getBoardList", send_param)
       .then(returnData => {
         let boardList;
         if (returnData.data.list.length > 0) {
